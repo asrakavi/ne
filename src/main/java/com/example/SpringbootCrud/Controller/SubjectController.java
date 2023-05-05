@@ -37,7 +37,7 @@ public class SubjectController {
 //    }
 //
 
-    //THIS IS MADE BY AVANISH RANA
+    //THIS IS MADE BY AVANISH RANA and edited by avi
 
 
     @RequestMapping(method=RequestMethod.GET,value="/subjects/{id}")
