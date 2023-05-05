@@ -22,8 +22,25 @@ public class SubjectService {
         return subjects;
     }
 
-    public void addSubject(Subject subject) {
-        subjectRepo.save(subject);
+
+    //    public Subject getSubject(String id) {
+//        Subject sub=null;
+//        try{
+//            sub=subjectRepo.FindbyId(id);
+//        } catch(Exception e){
+//            e.printStackTrace();
+//        }
+//        return sub;
+//    }
+
+    public Optional<Subject> getSubject(String id) {
+
+        return subjectRepo.findById(id);
+    }
+
+    public Subject addSubject(Subject subject) {
+        Subject sub1= subjectRepo.save(subject);
+        return sub1;
     }
 
     public void updateSubject(String id, Subject subject) {
@@ -34,9 +51,6 @@ public class SubjectService {
         subjectRepo.deleteById(id);
     }
 
-    public Optional<Subject> getSubject(String id) {
-        return subjectRepo.findById(id);
-    }
 
 }
 
